@@ -17,7 +17,9 @@
 				"alias": {
 					"tests": ["./__tests__/"],
 					"@assets": "./src/assets",
-					"@config": "./src/config"
+					"@config": "./src/config",
+					"@navigations": "./src/navigations",
+					"@screens": "./src/screens"
 				}
 			}
 		]
