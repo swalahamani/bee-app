@@ -15,7 +15,9 @@
 					".json"
 				],
 				"alias": {
-					"tests": ["./__tests__/"]
+					"tests": ["./__tests__/"],
+					"@assets": "./src/assets",
+					"@config": "./src/config"
 				}
 			}
 		]
