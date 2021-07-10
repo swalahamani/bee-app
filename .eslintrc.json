@@ -1,0 +1,104 @@
+{
+	"env": {
+		"commonjs": true,
+		"es2020": true,
+		"node": true,
+		"jest": true
+	},
+	"extends": [
+		"airbnb",
+		"plugin:react/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"prettier",
+		"prettier/react"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"createDefaultProgram": true
+	},
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	},
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"singleQuote": false,
+				"jsxBracketSameLine": false,
+				"endOfLine": "auto"
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{"extensions": [".js", ".tsx", ".jsx"]}
+		],
+		"react/jsx-indent": [
+			"error",
+			"tab",
+			{
+				"checkAttributes": false,
+				"indentLogicalExpressions": true
+			}
+		],
+		"react/jsx-indent-props": [2, "tab"],
+		"no-use-before-define": "off",
+		"no-shadow": "off",
+		"@typescript-eslint/no-use-before-define": ["error"],
+		// Commented out due to an incorrect error reported globally.
+		// See ref: https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined/64024916#64024916
+		// See Also: https://stackoverflow.com/a/63862578
+		// "no-use-before-define": [
+		// 	"error",
+		// 	{"functions": true, "classes": true, "variables": true}
+		// ],
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-closing-bracket-location": [1, "line-aligned"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"no-console": "off",
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"arrow-parens": ["error", "always"],
+		"arrow-body-style": ["error", "always"],
+		"comma-dangle": "off",
+		"import/extensions": [
+			"error",
+			"never",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"react/prefer-stateless-function": [0, {"ignorePureComponents": true}],
+		"spaced-comment": [0, "always"],
+		"@typescript-eslint/no-unused-vars": [2, {"args": "none"}],
+
+		// disabled because typescript has already its own checks
+		// refer: https://stackoverflow.com/a/64197516
+		"no-undef": "off"
+	}
+}
