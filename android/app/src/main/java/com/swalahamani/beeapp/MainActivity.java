@@ -1,4 +1,4 @@
-package com.bee;
+package com.swalahamani.beeapp;
 
 import com.facebook.react.ReactActivity;
 
