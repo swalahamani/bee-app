@@ -18,5 +18,12 @@
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"cSpell.words": ["Ionicons", "homescreen", "navigations", "postversion"]
+	"cSpell.words": [
+		"Ionicons",
+		"createpostscreen",
+		"homescreen",
+		"navigations",
+		"postversion",
+		"profilescreen"
+	]
 }
