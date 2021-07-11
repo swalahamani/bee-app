@@ -4,11 +4,11 @@
  *  File : index.tsx
  *******************************************/
 import React from "react";
-import {View, Text} from "react-native";
 
 import I18n from "i18n-js";
 
 import {bestAvailableLanguage, LocalizationContext} from "@config/Translations";
+import RootNavigator from "@navigations/index";
 
 function AppRoot() {
 	/**
@@ -38,9 +38,7 @@ function AppRoot() {
 
 	return (
 		<LocalizationContext.Provider value={localizationContext}>
-			<View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-				<Text>{localizationContext.translate("app-name")}</Text>
-			</View>
+			<RootNavigator />
 		</LocalizationContext.Provider>
 	);
 }
