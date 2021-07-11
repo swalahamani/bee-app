@@ -21,7 +21,8 @@
 					"@navigations": "./src/navigations",
 					"@screens": "./src/screens",
 					"@services": "./src/services",
-					"@store": "./src/store"
+					"@store": "./src/store",
+					"@styles": "./src/styles"
 				}
 			}
 		]
