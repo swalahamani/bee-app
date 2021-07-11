@@ -19,7 +19,9 @@
 					"@assets": "./src/assets",
 					"@config": "./src/config",
 					"@navigations": "./src/navigations",
-					"@screens": "./src/screens"
+					"@screens": "./src/screens",
+					"@services": "./src/services",
+					"@store": "./src/store"
 				}
 			}
 		]
