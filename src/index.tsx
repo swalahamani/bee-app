@@ -10,7 +10,8 @@ import I18n from "i18n-js";
 import {Provider} from "react-redux";
 import reduxStore from "@store/index";
 import * as eva from "@eva-design/eva";
-import {ApplicationProvider} from "@ui-kitten/components";
+import {ApplicationProvider, IconRegistry} from "@ui-kitten/components";
+import {EvaIconsPack} from "@ui-kitten/eva-icons";
 
 import {bestAvailableLanguage, LocalizationContext} from "@config/Translations";
 import RootNavigator from "@navigations/index";
@@ -44,7 +45,8 @@ function AppRoot() {
 	return (
 		<LocalizationContext.Provider value={localizationContext}>
 			<Provider store={reduxStore}>
-				<ApplicationProvider {...eva} theme={eva.light}>
+				<IconRegistry icons={EvaIconsPack} />
+				<ApplicationProvider mapping={eva.mapping} theme={eva.light}>
 					<RootNavigator />
 				</ApplicationProvider>
 			</Provider>
