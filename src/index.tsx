@@ -7,6 +7,8 @@
 import React from "react";
 
 import I18n from "i18n-js";
+import {Provider} from "react-redux";
+import reduxStore from "@store/index";
 import * as eva from "@eva-design/eva";
 import {ApplicationProvider} from "@ui-kitten/components";
 
@@ -41,9 +43,11 @@ function AppRoot() {
 
 	return (
 		<LocalizationContext.Provider value={localizationContext}>
-			<ApplicationProvider {...eva} theme={eva.light}>
-				<RootNavigator />
-			</ApplicationProvider>
+			<Provider store={reduxStore}>
+				<ApplicationProvider {...eva} theme={eva.light}>
+					<RootNavigator />
+				</ApplicationProvider>
+			</Provider>
 		</LocalizationContext.Provider>
 	);
 }
