@@ -13,9 +13,11 @@
 		"bump-version": "yarn version --no-git-tag-version"
 	},
 	"dependencies": {
+		"@eva-design/eva": "^2.1.0",
 		"@react-native-community/masked-view": "^0.1.11",
 		"@react-navigation/native": "^5.9.4",
 		"@react-navigation/stack": "^5.14.5",
+		"@ui-kitten/components": "^5.1.0",
 		"axios": "^0.21.1",
 		"i18n-js": "^3.8.0",
 		"react": "17.0.1",
@@ -26,6 +28,7 @@
 		"react-native-responsive-screen": "^1.4.2",
 		"react-native-safe-area-context": "^3.2.0",
 		"react-native-screens": "^3.4.0",
+		"react-native-svg": "^12.1.1",
 		"react-redux": "^7.2.4",
 		"redux": "^4.1.0",
 		"redux-logger": "^3.0.6",

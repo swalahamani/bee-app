@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /******************************************
  *  Author : Muhammad Swalah A A
  *  Created On : Sat Jul 10 2021
@@ -6,6 +7,8 @@
 import React from "react";
 
 import I18n from "i18n-js";
+import * as eva from "@eva-design/eva";
+import {ApplicationProvider} from "@ui-kitten/components";
 
 import {bestAvailableLanguage, LocalizationContext} from "@config/Translations";
 import RootNavigator from "@navigations/index";
@@ -38,7 +41,9 @@ function AppRoot() {
 
 	return (
 		<LocalizationContext.Provider value={localizationContext}>
-			<RootNavigator />
+			<ApplicationProvider {...eva} theme={eva.light}>
+				<RootNavigator />
+			</ApplicationProvider>
 		</LocalizationContext.Provider>
 	);
 }
