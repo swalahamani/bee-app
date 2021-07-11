@@ -1,9 +1,8 @@
 /******************************************
  *  Author : Muhammad Swalah A A
  *  Created On : Sun Jul 11 2021
- *  File : Colors.ts
+ *  File : index.tsx
  *******************************************/
-export const BLACK = "#000000";
-export const WHITE = "#FFFFFF";
+import CreatePostScreen from "./CreatePostScreen";
 
-export const RONCHI = "#EECB54";
+export default CreatePostScreen;

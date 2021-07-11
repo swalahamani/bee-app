@@ -1,7 +1,7 @@
 /******************************************
  *  Author : Muhammad Swalah A A
- *  Created On : Sat Jul 10 2021
- *  File : HomeScreen.tsx
+ *  Created On : Sun Jul 11 2021
+ *  File : ProfileScreen.tsx
  *******************************************/
 import React, {FC} from "react";
 import {SafeAreaView, Text} from "react-native";
@@ -10,7 +10,7 @@ type Props = {};
 
 const defaultProps: Partial<Props> = {};
 
-const HomeScreen: FC<Props> = () => {
+const ProfileScreen: FC<Props> = () => {
 	return (
 		<SafeAreaView
 			style={{
@@ -19,12 +19,12 @@ const HomeScreen: FC<Props> = () => {
 				alignItems: "center",
 			}}
 		>
-			<Text>Home Screen</Text>
+			<Text>Profile Screen</Text>
 		</SafeAreaView>
 	);
 };
 
-HomeScreen.displayName = "HomeScreen";
-HomeScreen.defaultProps = defaultProps;
+ProfileScreen.displayName = "ProfileScreen";
+ProfileScreen.defaultProps = defaultProps;
 
-export default HomeScreen;
+export default ProfileScreen;

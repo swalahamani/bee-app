@@ -3,11 +3,12 @@
  *  Created On : Sat Jul 10 2021
  *  File : NavConstants.ts
  *******************************************/
-
-type AppRouteStackParamList = {
+type AppRouteBottomTabParamList = {
 	HomeScreen: undefined;
+	CreatePostScreen: undefined;
+	ProfileScreen: undefined;
 };
 
 export default {};
 
-export type {AppRouteStackParamList};
+export type {AppRouteBottomTabParamList};

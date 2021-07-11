@@ -18,5 +18,13 @@
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"cSpell.words": ["homescreen", "navigations", "postversion"]
+	"cSpell.words": [
+		"Ionicons",
+		"RONCHI",
+		"createpostscreen",
+		"homescreen",
+		"navigations",
+		"postversion",
+		"profilescreen"
+	]
 }

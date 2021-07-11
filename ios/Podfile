@@ -40,3 +40,7 @@ target 'Bee' do
     system('cd Pods/OpenSSL-Universal/Frameworks/OpenSSL.xcframework/macos-arm64_arm64e_x86_64; ln -sfh OpenSSL.framework openssl.framework')
   end
 end
+
+# added as part of the installation of react-native-vector-icons
+# see: https://github.com/oblador/react-native-vector-icons#option-with-cocoapods
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
