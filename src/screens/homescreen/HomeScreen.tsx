@@ -4,7 +4,7 @@
  *  File : HomeScreen.tsx
  *******************************************/
 import React, {FC} from "react";
-import {View, Text} from "react-native";
+import {SafeAreaView, Text} from "react-native";
 
 type Props = {};
 
@@ -12,9 +12,15 @@ const defaultProps: Partial<Props> = {};
 
 const HomeScreen: FC<Props> = () => {
 	return (
-		<View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-			<Text>Bee Application</Text>
-		</View>
+		<SafeAreaView
+			style={{
+				flex: 1,
+				justifyContent: "center",
+				alignItems: "center",
+			}}
+		>
+			<Text>Home Screen</Text>
+		</SafeAreaView>
 	);
 };
 
