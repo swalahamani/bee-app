@@ -5,5 +5,6 @@
  *******************************************/
 import * as TranslationConstants from "./TranslationConstants";
 import NavConstants from "./NavConstants";
+import * as APIServiceConstants from "./AxiosServiceConstants";
 
-export {TranslationConstants, NavConstants};
+export {TranslationConstants, NavConstants, APIServiceConstants};
