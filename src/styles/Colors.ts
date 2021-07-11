@@ -5,3 +5,5 @@
  *******************************************/
 export const BLACK = "#000000";
 export const WHITE = "#FFFFFF";
+
+export const RONCHI = "#EECB54";
