@@ -3,6 +3,10 @@
  *  Created On : Sun Jul 11 2021
  *  File : ActionCreators.ts
  *******************************************/
-const actionCreators = {};
+import * as postStateActions from "@store/post/ThunkActions";
+
+const actionCreators = {
+	...postStateActions,
+};
 
 export default actionCreators;
