@@ -10,6 +10,8 @@ import {APIServiceConstants} from "@config/constants";
 
 import AxiosInterceptors from "./AxiosInterceptors";
 
+import PostService from "./PostService";
+
 /**
  * Creating axios instance for handling api service requests with
  * apiServerConfig.
@@ -51,4 +53,9 @@ Object.values(axiosInterceptors.responseInterceptors).forEach(
 	},
 );
 
-export {appAPIServer};
+/**
+ * Instanciating individual api services with appAPIServer.
+ */
+const postService = new PostService(appAPIServer);
+
+export {appAPIServer, postService};
