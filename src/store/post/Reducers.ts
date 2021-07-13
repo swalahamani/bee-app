@@ -23,7 +23,7 @@ const initialState: PostState = {
 	},
 };
 
-export default function sampleReducer(
+export default function postReducer(
 	state = initialState,
 	action: PostStateActionTypes,
 ) {
