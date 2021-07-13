@@ -42,7 +42,7 @@ export function updatePostStateResponseStatus(
 
 export function updatePostStateMessage(
 	message: APIResponseMessageType,
-	isMessageVisible: boolean,
+	isMessageVisible: boolean = false,
 ): PostStateActionTypes {
 	return {
 		type: UPDATE_POST_STATE_MESSAGE,
