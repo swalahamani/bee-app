@@ -38,6 +38,11 @@ export const clearAndHidePostStateMessage = (): AppThunk => {
 	};
 };
 
+/**
+ * Fetches posts by postService.fetchAllPosts and update PostState.posts.
+ *
+ * @returns
+ */
 export const fetchPosts = (): AppThunk => {
 	return async (dispatch) => {
 		try {
