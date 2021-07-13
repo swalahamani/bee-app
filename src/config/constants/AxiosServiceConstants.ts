@@ -48,5 +48,6 @@ export const apiServerConfig: AxiosRequestConfig = Object.freeze({
 export const apiEndpoints = Object.freeze({
 	posts: {
 		fetchAllPosts: "/swalahamani/json-place-holder-service/bee-app/",
+		craetePost: "/swalahamani/json-place-holder-service/bee-app/",
 	},
 });

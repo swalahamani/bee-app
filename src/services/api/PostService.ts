@@ -53,6 +53,46 @@ class PostService {
 
 		return result;
 	}
+
+	/**
+	 * API Service method for creating a post.
+	 *
+	 * @returns
+	 */
+	async createPost(post: string): Promise<APIResponse | null> {
+		let result = null;
+
+		await this.appAPIServer
+			.post(apiEndpoints.posts.craetePost, {
+				post,
+			})
+			.then(
+				// onFullFilled
+				(value) => {
+					result = NetworkUtil.buildResult(
+						null,
+						value.status,
+						null,
+						value.data,
+					);
+				},
+
+				// onRejected
+				(reason) => {
+					result = NetworkUtil.buildResult(
+						reason?.message,
+						reason?.status,
+						reason?.message,
+						null,
+					);
+				},
+			)
+			.catch((error) => {
+				throw error;
+			});
+
+		return result;
+	}
 }
 
 export default PostService;
