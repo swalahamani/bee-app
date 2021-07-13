@@ -6,13 +6,15 @@
  *******************************************/
 import {AxiosRequestConfig} from "axios";
 
+export const API_SERVER_BASE_URL_DEV = "https://my-json-server.typicode.com/";
+
 /**
  * This base url of the api server's endpoint needs to be configured here.
  *
  * NOTE: This has to be manged by a build flavour configuration files
  * such as environment fils via libraries like react-native-cofig later.
  */
-export const API_SERVER_BASE_URL = "";
+export const API_SERVER_BASE_URL = API_SERVER_BASE_URL_DEV;
 
 /**
  * All basic axios request-configurations needs to be set here.
@@ -20,7 +22,7 @@ export const API_SERVER_BASE_URL = "";
  * creating axios service instance to handle api calls.
  */
 export const apiServerConfig: AxiosRequestConfig = Object.freeze({
-	baseURL: "",
+	baseURL: API_SERVER_BASE_URL,
 });
 
 /**
@@ -45,6 +47,6 @@ export const apiServerConfig: AxiosRequestConfig = Object.freeze({
  */
 export const apiEndpoints = Object.freeze({
 	posts: {
-		fetchAllPosts: "/posts",
+		fetchAllPosts: "/swalahamani/json-place-holder-service/bee-app/",
 	},
 });
