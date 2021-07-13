@@ -4,9 +4,13 @@
  *  File : HomeScreen.tsx
  *******************************************/
 import React, {Component} from "react";
-import {SafeAreaView, Text} from "react-native";
+import {ScrollView} from "react-native";
 
 import {StackNavigationProp} from "@react-navigation/stack";
+
+import {Layout} from "@ui-kitten/components";
+
+import Post from "@components/post";
 
 import {AppRouteBottomTabParamList} from "@config/constants/NavConstants";
 
@@ -44,17 +48,34 @@ class HomeScreen extends Component<Props, State> {
 		return PortStyles;
 	};
 
+	renderPosts = () => {
+		const posts = [];
+
+		const postCount = 5;
+
+		for (let index = 0; index < postCount; index += 1) {
+			posts.push(
+				<Post
+					key={`something-unique-${index}`}
+					author="Swalah Amani"
+					content="Function "
+					dateAndTime="13 Jul 2021 07:54 PM"
+				/>,
+			);
+		}
+
+		return posts;
+	};
+
 	render() {
 		return (
-			<SafeAreaView
-				style={{
-					flex: 1,
-					justifyContent: "flex-start",
-					alignItems: "flex-start",
-				}}
-			>
-				<Text>Home Screen Label</Text>
-			</SafeAreaView>
+			<Layout style={this.getStyles().container} level="1">
+				<ScrollView
+					contentContainerStyle={this.getStyles().scrollContentContainer}
+				>
+					{this.renderPosts()}
+				</ScrollView>
+			</Layout>
 		);
 	}
 }
