@@ -5,7 +5,10 @@
  *******************************************/
 import {StyleSheet} from "react-native";
 
-import {widthPercentageToDP as wp} from "react-native-responsive-screen";
+import {
+	heightPercentageToDP as hp,
+	widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 import {Spacing} from "@styles";
 
 const {SCREEN_PADDING, BOTTOM_SCROLL_PADDING} = Spacing;
@@ -15,6 +18,18 @@ export default StyleSheet.create({
 		flex: 1,
 		justifyContent: "flex-start",
 		alignItems: "flex-start",
+	},
+
+	loadingContainer: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+
+		width: wp("100%"),
+	},
+
+	retryButton: {
+		marginTop: hp("3%"),
 	},
 
 	scrollContentContainer: {
