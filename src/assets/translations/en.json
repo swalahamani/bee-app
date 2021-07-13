@@ -1,3 +1,11 @@
 {
-	"app-name": "Bee App"
+	"app-name": "Bee App",
+
+	"Info": "Info",
+	"Ok": "Ok",
+	"Retry": "Retry",
+
+	"SomethingWentWrong": "Something went wrong.\n\nKindly contact support.",
+
+	"FetchAllPosts_message_fetching": "Fetching all posts..."
 }
