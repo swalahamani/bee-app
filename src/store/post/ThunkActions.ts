@@ -5,6 +5,7 @@
  *  File : ThunkActions.ts
  *******************************************/
 import I18n from "i18n-js";
+import moment from "moment-timezone";
 
 import {AppThunk} from "@store/index";
 import {postService} from "@services/api";
@@ -13,7 +14,9 @@ import {
 	APIResponse,
 	apiResponseStatuses,
 	httpStatusCodes,
-} from "config/NetworkTypes";
+} from "@config/NetworkTypes";
+import NetworkUtil from "@utils/NetworkUtil";
+import GenUtil from "@utils/GenUtil";
 import * as postActions from "./Actions";
 
 /**
@@ -113,6 +116,95 @@ export const fetchPosts = (): AppThunk => {
 			);
 
 			dispatch(postActions.updatePostStateLoadingStatus(false));
+		}
+	};
+};
+
+export const createPost = (post: string): AppThunk => {
+	return async (dispatch, getState) => {
+		console.log("ThunkActions.createPost");
+		/**
+		 * Setting the loading satus as true.
+		 * Things like loading indicators and other related things in the
+		 * corresponding screen will be rendered based on this.
+		 */
+		dispatch(postActions.updatePostStateLoadingStatus(true));
+
+		dispatch(
+			postActions.updatePostStateMessage(
+				I18n.translate("CreatePost_message_posting"),
+			),
+		);
+
+		/**
+		 * FIXME:
+		 * Simulating successfull creation of post with delay of 4000ms as the POST api is not actually
+		 * available.
+		 */
+		await GenUtil.waitFor(4000);
+		const response =
+			/*await postService.createPost(post)*/ NetworkUtil.buildResult(
+				null,
+				httpStatusCodes.SUCCESS_CREATED,
+				null,
+				{
+					postId: Math.round(Math.random() * 100),
+					post: {
+						author: "RockinguSeR",
+						dateAndTime: moment().format("DD MMM YYYY hh:mm A"),
+						content: post,
+					},
+				},
+			);
+
+		console.log(
+			"🚀 ~ file: ThunkActions.ts ~ line 143 ~ return ~ response",
+			response,
+		);
+		const {httpStatuCode, message, data} = response as APIResponse;
+
+		const {postIds: currentPostIds, posts: currentPosts} =
+			getState().postReducer.posts;
+
+		switch (httpStatuCode) {
+			case httpStatusCodes.SUCCESS_CREATED:
+				dispatch(
+					postActions.updatePostStatePosts({
+						postIds: [data.postId, ...currentPostIds],
+						posts: {
+							...currentPosts,
+							[data.postId]: data.post,
+						},
+					}),
+				);
+
+				dispatch(
+					postActions.updatePostStateResponseStatus(
+						apiResponseStatuses.SUCCESS,
+					),
+				);
+
+				dispatch(postActions.updatePostStateMessage(null));
+
+				dispatch(postActions.updatePostStateLoadingStatus(false));
+				break;
+
+			default: {
+				dispatch(
+					postActions.updatePostStateResponseStatus(apiResponseStatuses.ERROR),
+				);
+
+				dispatch(
+					postActions.updatePostStateMessage(
+						message && message.length > 0
+							? message
+							: I18n.translate("SomethingWentWrong"),
+						true,
+					),
+				);
+
+				dispatch(postActions.updatePostStateLoadingStatus(false));
+			}
 		}
 	};
 };

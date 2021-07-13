@@ -11,4 +11,6 @@
 
 	"PostEditor_create_post": "Create a new post",
 	"PostEditor_post_btn_label": "Post",
+
+	"CreatePost_message_posting": "Creating a new post..."
 }
