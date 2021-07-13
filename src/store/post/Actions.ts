@@ -8,12 +8,14 @@ import {
 	APIResponseMessageType,
 	apiResponseStatuses,
 } from "@config/NetworkTypes";
+import {PostsType} from "@config/StoreTypes";
 import {
 	PostStateActionTypes,
 	RESET_POST_STATE,
 	UPDATE_POST_STATE_LOADING_STATUS,
 	UPDATE_POST_STATE_RESPONSE_STATUS,
 	UPDATE_POST_STATE_MESSAGE,
+	UPDATE_POST_STATE_POSTS,
 } from "./Types";
 
 export function resetPostState(): PostStateActionTypes {
@@ -48,5 +50,12 @@ export function updatePostStateMessage(
 		type: UPDATE_POST_STATE_MESSAGE,
 		message,
 		isMessageVisible,
+	};
+}
+
+export function updatePostStatePosts(posts: PostsType): PostStateActionTypes {
+	return {
+		type: UPDATE_POST_STATE_POSTS,
+		posts,
 	};
 }

@@ -27,6 +27,7 @@ export const UPDATE_POST_STATE_LOADING_STATUS =
 export const UPDATE_POST_STATE_RESPONSE_STATUS =
 	"UPDATE_POST_STATE_RESPONSE_STATUS";
 export const UPDATE_POST_STATE_MESSAGE = "UPDATE_POST_STATE_MESSAGE";
+export const UPDATE_POST_STATE_POSTS = "UPDATE_POST_STATE_POSTS";
 
 interface ResetPostState {
 	type: typeof RESET_POST_STATE;
@@ -48,8 +49,14 @@ interface UpdatePostStateMessage {
 	isMessageVisible: boolean;
 }
 
+interface UpdatePostStatePosts {
+	type: typeof UPDATE_POST_STATE_POSTS;
+	posts: PostsType;
+}
+
 export type PostStateActionTypes =
 	| ResetPostState
 	| UpdatePostStateLoadingStatus
 	| UpdatePostStateResponseStatus
-	| UpdatePostStateMessage;
+	| UpdatePostStateMessage
+	| UpdatePostStatePosts;
