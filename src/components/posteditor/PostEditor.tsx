@@ -94,6 +94,11 @@ const PostEditor: FC<Props> = ({
 			tintColor = Colors.CRIMSON;
 		}
 
+		let disabled = true;
+		if (valueLength > 0) {
+			disabled = false;
+		}
+
 		return (
 			<View style={getStyles().footerContainer}>
 				<AnimatedCircularProgress
@@ -115,7 +120,8 @@ const PostEditor: FC<Props> = ({
 						);
 					}}
 				</AnimatedCircularProgress>
-				<Button size="small" onPress={localOnPressPost}>
+
+				<Button size="small" disabled={disabled} onPress={localOnPressPost}>
 					{translate("PostEditor_post_btn_label")}
 				</Button>
 			</View>

@@ -90,8 +90,4 @@ export default StyleSheet.create({
 	},
 });
 
-export {
-	ICON_SIZE,
-	PROGRESS_WIDTH,
-	PROGRESS_BACKGROUND_COLOR,
-};
+export {ICON_SIZE, PROGRESS_WIDTH, PROGRESS_BACKGROUND_COLOR};
