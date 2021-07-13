@@ -73,6 +73,7 @@ const BottomTabBar = ({
 
 			bottomTabs.push(
 				<BottomNavigationTab
+					key={routeName}
 					icon={() => {
 						return <IonIcons name={icon} size={iconSize} color={iconColor} />;
 					}}
