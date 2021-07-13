@@ -5,10 +5,10 @@
  *******************************************/
 import {combineReducers} from "redux";
 
-import sampleReducer from "@store/sample/Reducers";
+import postReducer from "@store/post/Reducers";
 
 const rootReducer = combineReducers({
-	sampleReducer,
+	postReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

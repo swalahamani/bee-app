@@ -22,7 +22,9 @@
 					"@screens": "./src/screens",
 					"@services": "./src/services",
 					"@store": "./src/store",
-					"@styles": "./src/styles"
+					"@styles": "./src/styles",
+					"@components": "./src/components",
+					"@utils": "./src/utils"
 				}
 			}
 		]
