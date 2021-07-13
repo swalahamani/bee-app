@@ -5,9 +5,11 @@
  *******************************************/
 import {combineReducers} from "redux";
 
+import authReducer from "@store/auth/Reducers";
 import postReducer from "@store/post/Reducers";
 
 const rootReducer = combineReducers({
+	authReducer,
 	postReducer,
 });
 
