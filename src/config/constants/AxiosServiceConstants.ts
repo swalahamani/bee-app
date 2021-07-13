@@ -22,3 +22,29 @@ export const API_SERVER_BASE_URL = "";
 export const apiServerConfig: AxiosRequestConfig = Object.freeze({
 	baseURL: "",
 });
+
+/**
+ * All the application service api endpoints should be defined here and never
+ * directly define and use apiEndpoints as the baseURL is configured based on
+ * the build flavour.
+ *
+ * While defining endpoints here, kindly note that the part after the base url
+ * should be added here and shouldn't include the host/baseURL part.
+ *
+ * Kindly refer the below examples for more details:
+ *
+ * If the endpoint is "https://dev.exampleapiserver.tld/api/v1/login" , then it
+ * should be split as below:
+ * API_SERVER_BASE_URL =  "https://dev.exampleapiserver.tld/api/v1"
+ * apiEndpoints = {
+ *     authentication: {
+ *         login: "/login"
+ *     }
+ * }
+ *
+ */
+export const apiEndpoints = Object.freeze({
+	posts: {
+		fetchAllPosts: "/posts",
+	},
+});
