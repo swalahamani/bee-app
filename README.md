@@ -20,3 +20,10 @@ Implemented the following things:
 - [x] Custom AppIcon
 - [x] path aliases via tsconfig & babelrc
 - [x] global styling for Colors and Typography (not used as of now.)
+
+### ToDo
+
+- [ ] splash screen
+- [ ] network connectivity status bar
+- [ ] profile screen
+- [ ] improve ux & ui
