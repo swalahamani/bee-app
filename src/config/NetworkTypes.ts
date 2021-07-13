@@ -10,6 +10,8 @@ type APIResponseMessageType = NullableString;
 type APIResponse = {
 	error: any;
 	httpStatuCode: httpStatusCodes | null;
+	message: NullableString;
+	data: any;
 };
 
 /**
