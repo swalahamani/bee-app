@@ -11,6 +11,8 @@ type StringArray = Array<string>;
 type NullableNumericArray = NumericArray | null;
 type NullableStringArray = StringArray | null;
 
+type ComponentIdType = string | number | undefined | null;
+
 export type {
 	NullableNumber,
 	NullableString,
@@ -19,4 +21,5 @@ export type {
 	StringArray,
 	NullableNumericArray,
 	NullableStringArray,
+	ComponentIdType,
 };
