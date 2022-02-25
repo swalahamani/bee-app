@@ -1,3 +1,5 @@
+![Bee App Icon Image](android/app/src/main/res/mipmap-xhdpi/ic_launcher.png)
+
 # Bee APP
 
 A simple micro-blogging application.
