@@ -1,10 +1,8 @@
-#  
-
-## Bee APP
+# Bee APP
 
 A simple micro-blogging application.
 
-### Notes:
+## Notes:
 
 Implemented the following things:
 
@@ -21,7 +19,7 @@ Implemented the following things:
 - [x] path aliases via tsconfig & babelrc
 - [x] global styling for Colors and Typography (not used as of now.)
 
-### ToDo
+## ToDo
 
 - [ ] splash screen
 - [ ] network connectivity status bar
